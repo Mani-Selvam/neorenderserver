@@ -1,0 +1,45 @@
+﻿E:\Neo_Ios\server\routes\userRoutes.js:781: delete otpStore[`password_change_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1086: router.delete("/company/account", verifyToken, async (req, res) => {
+E:\Neo_Ios\server\routes\userRoutes.js:1104: "Only the primary admin can permanently delete this company account",
+E:\Neo_Ios\server\routes\userRoutes.js:1130: reason: "Company account deleted permanently",
+E:\Neo_Ios\server\routes\userRoutes.js:1132: companyStatus: "Deleted",
+E:\Neo_Ios\server\routes\userRoutes.js:1142: Enquiry.deleteMany({
+E:\Neo_Ios\server\routes\userRoutes.js:1148: FollowUp.deleteMany({
+E:\Neo_Ios\server\routes\userRoutes.js:1154: ChatMessage.deleteMany({ userId: { $in: companyUserIds } }),
+E:\Neo_Ios\server\routes\userRoutes.js:1155: CommunicationMessage.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1156: CommunicationTask.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1157: EmailSettings.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1158: EmailTemplate.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1159: EmailLog.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1160: MessageTemplate.deleteMany({ userId: { $in: companyUserIds } }),
+E:\Neo_Ios\server\routes\userRoutes.js:1161: LeadSource.deleteMany({ createdBy: { $in: companyUserIds } }),
+E:\Neo_Ios\server\routes\userRoutes.js:1162: Product.deleteMany({ createdBy: { $in: companyUserIds } }),
+E:\Neo_Ios\server\routes\userRoutes.js:1163: Payment.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1164: Subscription.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1165: CompanySubscription.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1166: CompanyPlanOverride.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1167: SupportTicket.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1168: Target.deleteMany({ company_id: companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1169: WhatsAppConfig.deleteMany({ companyId }),
+E:\Neo_Ios\server\routes\userRoutes.js:1171: await Company.deleteOne({ _id: companyId });
+E:\Neo_Ios\server\routes\userRoutes.js:1182: message: "Company account and related data permanently deleted",
+E:\Neo_Ios\server\routes\userRoutes.js:1183: deletedCompany: {
+E:\Neo_Ios\server\routes\userRoutes.js:1232: delete otpStore[`email_old_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1310: delete otpStore[`email_new_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1311: delete otpStore[`email_old_verified_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1381: delete otpStore[`mobile_old_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1473: delete otpStore[`mobile_new_${req.userId}`];
+E:\Neo_Ios\server\routes\userRoutes.js:1474: delete otpStore[`mobile_old_verified_${req.userId}`];
+E:\Neo_Ios\server\routes\authRoutes.js:81: authRateLimitStore.delete(key);
+E:\Neo_Ios\server\routes\authRoutes.js:126: delete otpStore[key];
+E:\Neo_Ios\server\routes\authRoutes.js:928: delete otpStore[key];
+E:\Neo_Ios\server\routes\authRoutes.js:941: // OPTIONAL: Delete OTP after successful verification
+E:\Neo_Ios\server\routes\authRoutes.js:942: // delete otpStore[key];
+E:\Neo_Ios\server\routes\authRoutes.js:1015: delete otpStore[identifier];
+E:\Neo_Ios\server\routes\authRoutes.js:1148: delete otpStore[otpKey];
+E:\Neo_Ios\server\routes\authRoutes.js:1149: if (normalizedEmail) delete otpStore[normalizedEmail];
+E:\Neo_Ios\server\routes\authRoutes.js:1150: if (mobile) delete otpStore[mobile];
+E:\Neo_Ios\server\routes\authRoutes.js:1331: if (normalizedEmail) delete otpStore[normalizedEmail];
+E:\Neo_Ios\server\routes\authRoutes.js:1332: if (mobile) delete otpStore[mobile];
+E:\Neo_Ios\server\routes\authRoutes.js:2267: // Delete OTP after use
+E:\Neo_Ios\server\routes\authRoutes.js:2268: await OtpModel.deleteOne({ _id: otpDoc._id });
